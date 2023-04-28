@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Космос</title>
+</head>
+
+<body>
+
+
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Verdana, sans-serif;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hid {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.head {
+  color: #ffffff;
+
+  background-color: #222222;
+}
+
+.head .container {
+  min-height: 400px;
+  padding-top: 50px;
+  padding-bottom: 180px;
+
+  background-image: url("./img/moon-rocket.png");
+  background-repeat: no-repeat;
+  background-position: 520px 130px;
+}
+
+.main-nav {
+  display: flex;
+  margin-bottom: 95px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 60px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 660px;
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  margin-right: 40px;
+
+  font-size: 14px;
+  text-decoration: none;
+  color: #d4d4d4;
+}
+
+
+.menu a:hover {
+  color: white;
+}
+
+.menu a:active {
+  color: #ccc;
+}
+
+
+.contacts-menu {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 180px;
+  margin: 0;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: 80px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts-menu li {
+  margin-left: 20px;
+}
+
+
+.contacts-menu a:hover {
+  opacity: 0.8;
+}
+
+.contacts-menu a:active {
+  opacity: 0.4;
+}
+
+
+.contacts-menu .icon {
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+.contacts-menu .icon-mail {
+  background-image: url(./img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.contacts-menu .icon-phone {
+  background-image: url(./img/phone-icon.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.about {
+  width: 300px;
+  padding-left: 120px;
+}
+
+.about h1 {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  font-size: 45px;
+  line-height: 50px;
+  font-family: "Courier New", monospace;
+  color: white;
+}
+
+.about p {
+  margin: 0;
+  margin-bottom: 50px;
+  padding-left: 5px;
+
+  font-size: 14px;
+  line-height: 22px;
+  color: #d4d4d4;
+}
+
+.btn {
+  position: relative;
+
+  display: inline-block;
+  width: 195px;
+  padding: 0 25px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  color: #222222;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+}
+
+.btn::after {
+  content: "";
+
+  position: absolute;
+  right: 20px;
+  top: 17px;
+
+  width: 19px;
+  height: 16px;
+
+  background-image: url(./img/right-arrow-dark.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.btn-yellow {
+  background-color: #feca30;
+}
+
+
+.btn-yellow:hover {
+  background-color: white;
+}
+
+.btn-yellow:active {
+  background-color: #c1a300;
+}
+
+
+.btn-grey {
+  width: 215px;
+
+  color: white;
+
+  background-color: #222222;
+
+}
+
+.btn-grey::after {
+  background-image: url(./img/right-arrow-white.png);
+}
+
+.btn-grey:hover {
+  background-color: #676767;
+}
+
+.btn-grey:active {
+  background-color: #ccc;
+}
+
+.cection {
+  padding: 85px 0;
+
+  background-color: #131313;
+
+  color: #ffffff;
+}
+
+.cection-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.cection-list li {
+  position: relative;
+
+  width: 180px;
+  margin-right: 80px;
+  padding-top: 100px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #d4d4d4;
+}
+
+.cection-list li::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 60px;
+  height: 68px;
+}
+
+.feature-made-in-russia::after {
+  background-image: url(./img/advantage-icon-1.png);
+}
+
+.feature-food::after {
+  background-image: url(./img/advantage-icon-2.png);
+}
+
+.feature-pilots::after {
+  background-image: url(./img/advantage-icon-3.png);
+}
+
+.feature-moon-rover::after {
+  background-image: url(./img/advantage-icon-4.png);
+}
+
+.columns-container {
+  display: flex;
+}
+
+.columns-container .left-column {
+  width: 440px;
+  margin-right: 80px;
+}
+
+.columns-container .right-column {
+  width: 440px;
+}
+
+.moon-vacation {
+  padding-top: 80px;
+  padding-bottom: 45px;
+}
+
+.moon-vacation .lead {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Courier New", monospace;
+}
+
+.recommendations {
+  padding-top: 20px;
+  padding-bottom: 55px;
+}
+
+.recommendations h3 {
+  margin-top: 0;
+  margin-bottom: 35px;
+  
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Courier New", monospace;
+}
+
+.recommendations-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+
+  list-style: none;
+}
+
+.recommendations-list li {
+  position: relative;
+
+  margin-bottom: 20px;
+}
+
+.recommendations-list li::before {
+  content: "";
+
+  position: absolute;
+  left: -25px;
+  top: 5px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background-color: #feca30;
+}
+
+
+.site-footer {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  color: #ffffff;
+
+  background-color: #131313;
+}
+
+
+.footer-columns-container {
+  display: flex;
+}
+
+.footer-columns-container .left-column {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin-right: 100px;
+}
+
+.footer-columns-container .right-column {
+  width: 720px;
+  padding-top: 35px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.logo-container .logo {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.logo-container p {
+    font-size: 14px;
+}
+
+.copyrights {
+  margin-top: auto;
+  color: #555555;
+}
+
+.footer-menu {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-menu > li {
+  width: 180px;
+  margin-right: 60px;
+}
+
+.footer-submenu-title {
+  display: block;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-bottom: 1px solid #555555;
+}
+
+.footer-submenu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-submenu > li {
+  margin-bottom: 20px;
+}
+
+.footer-submenu a {
+  text-decoration: none;
+  color: #888888;
+}
+
+
+    .footer-nav a:hover {
+      color: white;
+    }
+
+    .footer-nav a:active {
+      color: #ccc;
+    }
+
+    </style>
+
+
+    <header class="head">
+        <div class="container">
+            <nav class="main-nav">
+              <a class="logo">
+                  <img src="img/logo.png" alt="SpaceZ" width="60" height="60">
+              </a>
+              <ul class="menu">
+                  <li><a href="#">Компания</a></li>
+                  <li><a href="#">Каталог</a></li>
+                  <li><a href="#">Контакты</a></li>
+              </ul>
+              <ul class="contacts-menu">
+                  <li>
+                      <a href="#" class="icon icon-mail" title="Написать нам">
+                          <span class="hid">Написать нам</span>
+                      </a>
+                </li>
+                  <li>
+                      <a href="#" class="icon icon-phone" title="Позвонить нам">
+                          <span class="hid">Позвонить нам</span>
+                      </a>
+                  </li>
+              </ul>
+            </nav>
+            <section class="about">
+                <h1>На Луну<br> и обратно</h1>
+                <p>
+                    Космически крутой туризм.<br>
+                    Пакетные и индивидуальные туры по лучшим планетам галактики.
+                </p>
+                <a href="#" class="btn btn-yellow">Подбор тура</a>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section class="cection">
+            <div class="container">
+                <h2 class="hid">Наши преимущества</h2>
+                <ul class="cection-list">
+                    <li class="feature-made-in-russia">Комфортабельные ракеты отечественного производства.</li>
+                    <li class="feature-food">Вкусное и полезное космическое питание на борту.</li>
+                    <li class="feature-pilots">Весь состав пилотов состоит из бывших космонавтов.</li>
+                    <li class="feature-moon-rover">Экскурсии на луноходе на Море Ясности и Океан Бурь.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="moon-vacation">
+            <div class="container columns-container">
+                <h2 class="hid">Отпуск на Луне</h2>
+                <div class="left-column">
+                    <img src="img/map.jpg" alt="Карта путешествия" width="440" height="347">
+                </div>
+                <div class="right-column">
+                    <p class="lead"><b>Надоело летать в отпуск за границу? Как на счет того, чтобы слетать на Луну?</b></p>
+                    <p>Устали от пакетных туров и пляжного отдыха? Полотенца и магнитики, которые вы привозите из отпуска уже не радуют ваших близких? В следующий раз привезите им настоящий лунный камень!</p>
+                    <p>Мы предлагаем инновационную услугу на туристическом рынке — космический туризм (пока только на Луну, сейчас решаем вопросы с визовым центром Венеры).</p>
+                    <p>Берите отпуск и отправляйтесь с нами в полет, он займет всего 72 часа!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendations">
+            <div class="container columns-container">
+                <h2 class="hid">Рекомендации для космических туристов</h2>
+                <div class="left-column">
+                    <h3>Не забудьте взять с собой:</h3>
+                    <ul class="recommendations-list">
+                        <li><strong>Паспорт.</strong> Визовый режим пока не введен, но на границе будет досмотр.</li>
+                        <li><strong>Тяжелые ботинки.</strong> Пригодятся вам в условиях низкой гравитации на Луне.</li>
+                        <li><strong>Криптовалюта.</strong> Рекомендуем заранее обменять немного Лун-коинов, чтобы купить сувениры.</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <h3>Это лучше оставить дома:</h3>
+                    <ul class="recommendations-list">
+                        <li><strong>Телефон. </strong>В космосе не ловит ваш любимый оператор и нет Wi-Fi.</li>
+                        <li><strong>Бутерброды.</strong> На борту будет питание, которое не разлетится по кабине в условиях невесомости.</li>
+                        <li><strong>Плавки/купальник.</strong> Море Ясности и Океан Бурь это большие кратеры. Без воды.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-columns-container">
+            <div class="left-column">
+                <p class="logo-container">
+                    <a class="logo"><img src="img/logo.png" alt="Логотип SpaceZ" width="60" height="60"></a>
+                    <span class="company-title">Space Z</span>
+                </p>
+                <p class="copyrights">
+                    ООО «Космос Зэ».<br>
+                    Все права защищены.
+                </p>
+            </div>
+            <div class="right-column">
+                <ul class="footer-menu">
+                    <li>
+                        <a class="footer-submenu-title" href="#">Компания</a>
+                        <ul class="footer-submenu">
+                            <li><a href="#">История</a></li>
+                            <li><a href="#">Миссия</a></li>
+                            <li><a href="#">Команда</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="footer-submenu-title" href="#">Каталог</a>
+                        <ul class="footer-submenu">
+                            <li><a href="#">Полеты</a></li>
+                            <li><a href="#">Проживания</a></li>
+                            <li><a href="#">Экскурсия</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="footer-submenu-title" href="#">Контакты</a>
+                        <ul class="footer-submenu">
+                            <li><a href="#">Отправить заявку</a></li>
+                            <li><a href="#">Схема проезда</a></li>
+                            <li><a href="#">Время работы</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
