@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud</title>
+</head>
+<style>
+    html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Alegreya', sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 0 10px;
+}
+
+.header {
+  background: url(./img2/bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+}
+
+.header .container {
+  position: relative;
+  top: 200px;
+}
+
+.header h1 {
+  font-size: 80px;
+  line-height: 100px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header p {
+  font-weight: 500;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn {
+  background: #000;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.nav {
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  height: 80px;
+}
+
+.nav ul li {
+  color: #fff;
+  display: inline-block;
+  height: 80px;
+  line-height: 80px;
+  list-style: none;
+  padding: 0 10px;
+  transition: background .5s;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main .container {
+  margin: 80px auto;
+}
+
+.main img {
+  float: left;
+  height: 128px;
+  width: 196px;
+  margin: 50px 80px 50px 0px;
+}
+
+.hide-footer .container {
+  position: relative;
+  top: 220px;
+}
+
+.hide-footer {
+  background: url(./img2/jumbotron_bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+}
+
+.hide-footer h2 {
+  text-align: right;
+  color: #FFF;
+}
+
+.hide-footer p {
+  text-align: right;
+  color: #FFF;
+}
+
+.hide-footer .btn {
+  float: right;
+  padding: 10px 30px 10px;
+}
+
+.hide-footer h2,
+p,
+.btn {
+  margin-right: 40px;
+}
+
+.footer {
+  background: #000;
+  height: 80px;
+}
+
+.footer p {
+  margin-top: 0px;
+  font-size: 14px;
+  color: #FFF;
+  line-height: 80px;
+  margin: 0px;
+}
+.hide-footer .container {
+    margin-left: 40%;
+}
+
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 50px;
+    line-height: 64px;
+  }
+  .main,
+  .hide-footer {
+    padding: 0 30px;
+  }
+  .main img {
+    width: 100%;
+  }
+}
+
+@media (min-width:850px) {
+  .header h1 {
+    font-size: 120px;
+  }
+}
+</style>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Innovation Cloud</h1>
+      <p>Connect your ideas globally</p>
+      <button class="btn" href="#">Learn More</button>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="container">
+      <ul>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Sponsors</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="container">
+      <img src="./img2/cloud.png" />
+
+      <h2>The Innovation Cloud Conference</h2>
+      <p>Connect with the best minds across a wide range of industries to share ideas and brainstorm new solutions to challenging problems.</p>
+      <p>Hear industry leaders talk about what worked (and what didn't) so that you can save time on your most challenging projects.</p>
+      <p>Learn about the latest research and technologies that you can use immediately to invent the future.</p>
+    </div>
+  </div>
+  <div class="hide-footer">
+    <div class="container">
+      <h2>Stay Connected</h2>
+      <p>Receive weekly insights from industry insiders</p>
+      <button class="btn" href="#">Join</button>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <p>© Innovation Cloud Conference</p>
+</body>
+
+</html>
